@@ -1,7 +1,6 @@
 # User Management Microservice
 
-This project is a senior-level interview example of a small Go microservice for managing users. It is intentionally narrow in scope, but intentionally rich in the kinds of architectural decisions and operational patterns that matter at senior, staff, and principal levels.
-
+This project is an example of a small Go microservice for managing users. It is intentionally narrow in scope, but intentionally rich in the kinds of architectural decisions and operational patterns.
 It demonstrates:
 
 - layered architecture and domain separation
@@ -13,7 +12,7 @@ It demonstrates:
 - defensive validation and consistent API contracts
 - concurrency-aware in-memory storage for a local demo
 
-## Why this design is strong for senior interviews
+## Why this design is strong
 
 ### 12-factor alignment
 
@@ -43,7 +42,7 @@ It demonstrates:
 
 ## Practical senior architecture reasoning
 
-This is the kind of system a senior engineer can describe in interviews using architecture language such as:
+This is the kind of system a that can be described as using architecture language such as:
 
 > The service has a clear composition root at startup, a domain layer that encapsulates business rules, and a transport layer that enforces API boundary behavior. The in-memory repository is intentionally not production-grade, but the abstraction makes it straightforward to swap in PostgreSQL or a distributed datastore later. The service also exposes Prometheus metrics and readiness signals so it can participate in container orchestration, autoscaling, and SRE tooling without needing custom logic outside the service.
 
